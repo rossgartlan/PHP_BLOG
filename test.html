@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            $('#target').click(function () {
+                $('#output').html(function (i, val) {
+                    return val * 1 + 1
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="target" type="button">Click Me</button>
+        <div id="output">10</div>
+    </body>
+</html>
+<?php foreach ($row as $ro) : ?>
+                <?php echo '<h1>' . $ro->getPostTitle() . '</h1>'; ?>;
+                <?php echo '<p>' . $ro->getPostDate() . '</p>'; ?>;
+                <?php echo '<p>' . $ro->getPostCont() . '</p>'; ?>;
+                <?php echo '<p>' . $ro->getTags() . '</p>'; ?>;
+            <?php endforeach; ?>
+        </div>
